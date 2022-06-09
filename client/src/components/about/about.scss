@@ -1,0 +1,64 @@
+.about {
+    background-color: white;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 56px;
+        margin-top: 2em;
+        color: black;
+    }
+
+    .aboutMe {
+        display: flex;
+        height: 30%;
+
+        .left{
+            flex: 1;
+            background-color: white;
+            padding: 1em;
+            width: 80%;
+            height: 80%;
+        }
+        .right{
+            flex: 1;
+        }
+    }
+
+            
+    h2 {
+        margin-top: 1em;
+        font-size: 56px;
+        color: black;
+        font-weight: bold;
+    }
+
+
+    .skills {
+        display: flex;
+        justify-content: space-around;
+        margin: 2em 5em;
+
+        .table{
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-size: 36px;
+                font-weight: 600;
+            }
+
+            ul {
+                // list-style: none;
+
+                .skill {
+                    margin-top: 1em;
+
+                }
+            }
+
+            }
+    }
+    
+}
