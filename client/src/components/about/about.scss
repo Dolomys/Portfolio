@@ -23,6 +23,12 @@
         }
         .right{
             flex: 1;
+
+            img {
+                width: 30%;
+                margin-left: 15em;
+                border-radius: 5px;
+            }
         }
     }
 

@@ -1,4 +1,5 @@
 import './about.scss'
+import cat from "../../img/cat.jpg"
 
 export const About = () => {
   return (
@@ -8,7 +9,9 @@ export const About = () => {
           <div className="left">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem a iure soluta culpa atque! Quam laborum facilis ut illo dolore vel cumque natus doloribus. Saepe dolorum autem molestiae quam ea?
           </div>
-          <div className="right"></div>
+          <div className="right">
+            <img src={cat} alt="" />
+          </div>
         </div>
         <h2>Skills</h2>
         <div className="skills">

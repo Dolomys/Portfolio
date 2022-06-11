@@ -1,5 +1,7 @@
 import './intro.scss'
 import { AiOutlineDown } from "react-icons/ai";
+import { AnimatePresence, motion } from "framer-motion"
+
 
 export const Intro = () => {
   return (
@@ -12,7 +14,12 @@ export const Intro = () => {
             <p>Mountain and outdoor sport addict</p>
           </div>
           
-          <a href="#projects" className='seeMore'>See More</a>
+          <a href="#projects">
+            <motion.button 
+             whileHover={{ scale: 1.1 }}
+             whileTap={{ scale: 0.9 }}
+             className='seeMore'>See More</motion.button>
+          </a>
         </div>
        
       </div>

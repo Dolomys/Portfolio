@@ -5,7 +5,6 @@ import { projects } from '../../data/projects';
 import { useEffect, useRef, useState } from "react";
 
 export const Projects = () => {
-
   
   const [selectedId, setSelectedId] = useState(null)
   const [width, setWidth] = useState(0);

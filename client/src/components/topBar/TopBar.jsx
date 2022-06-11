@@ -6,7 +6,7 @@ export const TopBar = ({menuOpen,setMenuOpen}) => {
     <div className={"topBar "+ (menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#intro" className='logo'>Alexandre.Florent</a>
+          <a href="#intro" className='logo'>AlFlO<span className='dot'>.</span></a>
         </div>
         <div className="right">
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

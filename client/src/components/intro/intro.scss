@@ -13,7 +13,6 @@
             flex-direction: column;
             width: 100%;
             height: 100%;
-            justify-content: center;
             padding-left: 5em;
            
 
@@ -28,11 +27,12 @@
                     margin-top: 1em;
                     background-color: $mainColor;
                     padding: 20px;
-                    width: 4.3em;
+                    border: none;
                     border-radius: 10px;
                     color: white;
                     text-decoration: none;
                     font-size: 24px;
+                     cursor: pointer;
 
                 }
 
