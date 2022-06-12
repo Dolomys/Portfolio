@@ -1,8 +1,8 @@
 import './menu.scss'
 
-export const Menu = ({menuOpen, setMenuOpen}) => {
+export const Menu = ({menuOpen, setMenuOpen, dark}) => {
   return (
-    <div className={"menu " + (menuOpen && "active")}>
+    <div className={"menu " + (menuOpen && "active") +" " + (dark && "dark")}>
         <ul>
             <li onClick={() => setMenuOpen(false)}>
                 <a href="#intro">Home</a>

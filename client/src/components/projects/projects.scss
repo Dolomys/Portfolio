@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .projects {
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,13 +9,14 @@
 
     h1 {
         font-size: 50px;
+        height: 80px;
     }
 
     ul {
-        margin: 10px;
-        padding: 0;
+        padding-bottom: 2em;
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
     }
 
     .container {
@@ -25,7 +25,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-
+        
     }
     
 
@@ -51,7 +51,7 @@
             justify-content: space-between;
             background-color: white;
             border-radius: 10px;
-            width: 60vmin;
+            width: 50vmin;
             height: 70vmin;
 
             .top {

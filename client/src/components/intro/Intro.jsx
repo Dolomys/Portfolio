@@ -3,7 +3,7 @@ import { AiOutlineDown } from "react-icons/ai";
 import { motion } from "framer-motion"
 
 
-export const Intro = () => {
+export const Intro = ({dark}) => {
   return (
     <div className="intro" id="intro">
       <div className="left">
@@ -18,7 +18,7 @@ export const Intro = () => {
             <motion.button 
              whileHover={{ scale: 1.1 }}
              whileTap={{ scale: 0.9 }}
-             className='seeMore'>See More</motion.button>
+             className={dark ? "seeMore dark" : "seeMore" }>See More</motion.button>
           </a>
         </div>
        

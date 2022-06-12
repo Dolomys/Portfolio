@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { PortfolioList } from "../portfolioList/PortfolioList";
 import { SingleProject } from "../singleProject/SingleProject";
 
-export const Projects = () => {
+export const Projects = ({dark}) => {
 
   const [selected, setSelected] = useState("Featured")
   const [clicked, setClicked] = useState("")
@@ -44,6 +44,7 @@ export const Projects = () => {
         title={e.title}
         active={selected === e.id}
         setSelected={setSelected}
+        dark={dark}
         />
       ))}
     </ul>
@@ -54,6 +55,7 @@ export const Projects = () => {
           image={project.picture}
           clicked={clicked}
           setClicked={setClicked}
+          dark={dark}
         />
       ))}
     </div>

@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .intro {
-    background-color: white;
     display: flex;
     position: relative;
 
@@ -19,7 +18,7 @@
            
 
             .textWrapper {
-                color: $mainColor;
+              
                 font-size: 8vmin;
                 
             }
@@ -27,7 +26,6 @@
           
                 .seeMore {
                     margin-top: 1em;
-                    background-color: $mainColor;
                     padding: 20px;
                     border: none;
                     border-radius: 10px;
@@ -35,6 +33,12 @@
                     text-decoration: none;
                     font-size: 24px;
                      cursor: pointer;
+                     background-color: #303437;
+
+                     &.dark {
+                        color: #303437;
+                        background-color: white;
+                     }
 
                 }
 

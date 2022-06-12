@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .about {
-    background-color: white;
     padding: 10px 30px;
     display: flex;
     flex-direction: column;
@@ -11,6 +10,7 @@
         font-size: 7vmin;
         overflow: hidden;
         margin-bottom: 10px;
+        height: 3rem;
     }
 
     .aboutMe {
@@ -20,7 +20,6 @@
 
         .left{
             flex: 1;
-            background-color: white;
             padding: 1em;
             width: 100%;
             height: 100%;
@@ -47,8 +46,8 @@
     h2 {
         margin-top: 5vmin;
         font-size: 7vmin;
-        color: black;
         font-weight: bold;
+        height: 3rem;
     }
 
 

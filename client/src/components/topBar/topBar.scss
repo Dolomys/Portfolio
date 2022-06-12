@@ -4,11 +4,16 @@
     width: 100%;
     height: 70px;
     background-color: white;
-    color: $mainColor;
+    color: #303437;
     position: fixed;
     top: 0;
     z-index: 99999;
     transition: all 1s ease;
+
+    &.dark {
+        background-color: #303437;;
+        color: white;
+    }
 
     .wrapper {
         padding: 10px 30px;
@@ -31,6 +36,15 @@
         }
 
         .right {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 10%;
+            
+            .theme {
+                font-size: 2em;
+                cursor: pointer;
+            }
 
             .hamburger{
                 width: 32px;
@@ -43,31 +57,32 @@
                 span {
                     width: 100%;
                     height: 3px;
-                    background: $mainColor;
+                    background: #303437;
                     border-radius: 5px;
                     transform-origin: left;
                     transition: all 2s ease;
+
+                    &.dark {
+                        background-color: white;
+                        color: #303437;
+                    }
                 }
             }
         }
     }
 
     &.active {
-        background-color: $mainColor;
-        color: white;
 
         .hamburger {
             
             span{
                 &:first-child{
-                    background-color: white;
                     transform: rotate(45deg)
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:last-child {
-                    background-color: white;
                     transform: rotate(-45deg)
                 }
             }

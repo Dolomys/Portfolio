@@ -6,10 +6,17 @@
     padding: 7px;
     border-radius: 10px;
     cursor: pointer;
+    height: 20px;
 
     &.active {
-        background-color: $mainColor;
+        background-color: #303437;
         color: white;
 
+        &.dark {
+            background-color: white;
+            color: #303437;
+        }
+
     }
+
 }
