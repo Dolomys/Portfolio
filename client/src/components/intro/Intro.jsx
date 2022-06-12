@@ -1,6 +1,6 @@
 import './intro.scss'
 import { AiOutlineDown } from "react-icons/ai";
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 
 export const Intro = () => {
@@ -23,7 +23,8 @@ export const Intro = () => {
         </div>
        
       </div>
-      <div className="right"></div>
+      <div className="right">
+      </div>
       <a href="#projects" className='more'>
             <AiOutlineDown className='arrow'/>
           </a>

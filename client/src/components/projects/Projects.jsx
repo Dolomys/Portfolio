@@ -3,48 +3,81 @@ import './projects.scss'
 
 import { projects } from '../../data/projects';
 import { useEffect, useRef, useState } from "react";
+import { PortfolioList } from "../portfolioList/PortfolioList";
+import { SingleProject } from "../singleProject/SingleProject";
 
 export const Projects = () => {
-  
-  const [selectedId, setSelectedId] = useState(null)
-  const [width, setWidth] = useState(0);
-  const carousel = useRef()
 
-  useEffect(()=> {
-    console.log(carousel)
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-  },[])
+  const [selected, setSelected] = useState("Featured")
+  const [clicked, setClicked] = useState("")
+  const [showModal, setShowModal] = useState(false)
 
-
+  const list = [
+    {
+      id: "Featured",
+      title: "Featured"
+    },
+    {
+      id: "Web App",
+      title: "Web App"
+    },
+    {
+      id: "Mobile App",
+      title: "Mobile App"
+    },
+    {
+      id: "PWA",
+      title: "PWA"
+    },
+    {
+      id: "Design",
+      title: "Design"
+    }
+  ]
 
   return (
     <div className="projects" id="projects"> 
-    <h1>Personnel & Professionnal Projects</h1>
-       <motion.div ref={carousel} className="carousel" whileTap={{cursor: "grabbing"}}>
-          <motion.div drag="x" dragConstraints={{right: 0, left: -width}} className="innerCarousel">
-          {projects && projects.map(e=> (
-              <motion.div 
-              className='projectCard' 
-              key={e.id} 
-              whileHover={{scale:1.2,transition: { duration: 0.5 }}}
-              layoutId={e.id}
-              onClick={() => setSelectedId(e.id)}
-              >
-                <img src={e.picture} alt=""  className='cardPicture'/>
-                <span className='cardTitle'>{e.name}</span>
-                {/* <div className="cardTech">{e.tech.map(e => (
-                  <div className="singleTech">{e}</div>
-                  ))}
-                </div>
-                <div className="cardDesc">{e.desc}</div>
-                <div className="cardLinks">
-                  <a href={e.github} className="link">Github</a>
-                  <a href={e.code} className="link">View Project !</a>
-                </div> */}
-              </motion.div>
-          ))}
-          </motion.div>
-       </motion.div>
+    <h1>Projects</h1>
+    <ul>
+      {list.map((e) => (
+        <PortfolioList 
+        title={e.title}
+        active={selected === e.id}
+        setSelected={setSelected}
+        />
+      ))}
+    </ul>
+    <div className="container">
+      {projects && projects.filter(project => project.cat.includes(selected)).map(project => (
+        <SingleProject
+          title={project.name}
+          image={project.picture}
+          clicked={clicked}
+          setClicked={setClicked}
+        />
+      ))}
+    </div>
+    {clicked && projects.filter(project => clicked === project.name).map(e => (
+        <div className="modal" onClick={() => setClicked("")}>
+          <div className="innerModal" onClick={e => e.stopPropagation()}>
+            <div className="top">
+            <h2 className="modalTitle">{e.name}</h2>
+            <span className="closeModal" onClick={()=> setClicked("")}>X</span>
+            </div>
+            <img src={e.picture} alt="" className="modalImg"/>
+            <ul>
+              {e.tech.map(tech => (
+                <li className="singleTech">{tech}</li>
+              ))}
+            </ul>
+            <p className="modalDesc">{e.desc}</p>
+            <div className="linkBtn">
+              <a href={e.github} className="gitBtn">Github</a>
+              <a href={e.code} className="liveBtn">Live View</a>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   )
 }

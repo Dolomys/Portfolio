@@ -6,7 +6,8 @@ export const projects = [
         tech:["Javascript", "React", "NodeJs", "MongoDb"],
         desc:"Short desc about this project, blablabla....",
         code:"www.alexandre-florent.com",
-        github:"www.github.com"
+        github:"www.github.com",
+        cat: ["Featured", "Web App", "Mobile App"]
     },
     {
         id:2,
@@ -15,7 +16,8 @@ export const projects = [
         tech:["Javascript", "React", "NodeJs", "MongoDb"],
         desc:"Short desc about this project, blablabla....",
         code:"www.alexandre-florent.com",
-        github:"www.github.com"
+        github:"www.github.com",
+        cat: ["Featured", "Mobile App"]
     },
     {
         id:3,
@@ -24,7 +26,8 @@ export const projects = [
         tech:["Javascript", "React", "NodeJs", "MongoDb"],
         desc:"Short desc about this project, blablabla....",
         code:"www.alexandre-florent.com",
-        github:"www.github.com"
+        github:"www.github.com",
+        cat: [ "Web App", "Mobile App"]
     },
     {
         id:4,
@@ -33,7 +36,8 @@ export const projects = [
         tech:["Javascript", "React", "NodeJs", "MongoDb"],
         desc:"Short desc about this project, blablabla....",
         code:"www.alexandre-florent.com",
-        github:"www.github.com"
+        github:"www.github.com",
+        cat: ["Featured", "Web App"]
     },
     {
         id:5,
@@ -42,7 +46,8 @@ export const projects = [
         tech:["Javascript", "React", "NodeJs", "MongoDb"],
         desc:"Short desc about this project, blablabla....",
         code:"www.alexandre-florent.com",
-        github:"www.github.com"
+        github:"www.github.com",
+        cat: ["Featured", "Mobile App"]
     },
     {
         id:6,
@@ -51,6 +56,7 @@ export const projects = [
         tech:["Javascript", "React", "NodeJs", "MongoDb"],
         desc:"Short desc about this project, blablabla....",
         code:"www.alexandre-florent.com",
-        github:"www.github.com"
+        github:"www.github.com",
+        cat: ["Featured", "Web App"]
     },
 ]

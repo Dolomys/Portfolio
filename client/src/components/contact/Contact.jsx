@@ -1,63 +1,69 @@
 import { useState } from 'react'
-import { AnimatePresence, motion } from "framer-motion"
 import './contact.scss'
+import Marseille from "../../img/Marseille.png"
+import gif from "../../img/loader.gif"
+import { motion } from "framer-motion"
+import axios from 'axios'
 
 export const Contact = () => {
 
-  const [step, setStep] = useState(0)  
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [msg, setMsg] = useState("")
+  const [success, setSuccess] = useState(false)
+  const [loader,setLoader] = useState(false)
+
+  const handleSubmit = async(e) => {
+    setLoader(true)
+    e.preventDefault()
+    let data = {
+      name: name,
+      email: email,
+      message : msg
+    }
+    axios.defaults.headers.post['Content-Type'] = 'application/json';
+    try{
+      let call = axios.post("https://formsubmit.co/ajax/60ce96306c8cfd1d3f468cfad384ab88", data)
+      let res = await call
+      if(res.data.success) {
+        setLoader(false)
+        setSuccess(true)
+      }
+    }
+    catch(err){
+      console.log(err)
+    }
+    
+
+
+  }
+
   
   return (
     <div className="contact" id="contact">
-        <div className="left">
-          <div className="form">
-          <form action="POST" className="contactForm" >
-            {step === 0 &&   
-              <div className="action1">
-                  <label htmlFor="email">Enter your Email</label>
-                  <input type="text" className="input" placeholder="Email"/>
-                  <motion.button  
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  onClick={(e) => {e.preventDefault(); setStep(step + 1)}}>Next</motion.button>
-              </div>
-            }
-            
-            {step === 1 && 
-             <div className="action2">
-              <label htmlFor="message">Enter your Message</label>
-              <textarea className="input" placeholder='Enter your message' autoFocus/>
-              <div className="navigation"> 
-              <motion.button
-               whileHover={{ scale: 1.1 }}
-               whileTap={{ scale: 0.9 }}
-                onClick={(e) => {e.preventDefault(); setStep(step - 1)}} >Previous</motion.button>
-              <motion.button
-               whileHover={{ scale: 1.1 }}
-               whileTap={{ scale: 0.9 }}
-                onClick={(e) => {e.preventDefault(); setStep(step + 1)}}>Next</motion.button></div>
-             </div>
-            }
-
-           {step === 2 && 
-           <div className="action3">
-             <div className="navigation">
-              <motion.button 
-               whileHover={{ scale: 1.1 }}
-               whileTap={{ scale: 0.9 }}
-               onClick={(e) => {e.preventDefault(); setStep(step - 1 )}} >Previous</motion.button>
-              <motion.button 
-               whileHover={{ scale: 1.1 }}
-               whileTap={{ scale: 0.9 }}
-               className="submitBtn" type='submit'>Send</motion.button>
-             </div>
-           </div>
-           }
-             
-              
-          </form>
-          </div>
+      <div className="left">
+        <h1>Contact Me</h1>
+        <form  method='POST' onSubmit={handleSubmit} >
+          <input type="text" placeholder='Name' name="name" onChange={(e) => setName(e.target.value)}/>
+          <input type="text" placeholder='Email' name="email" onChange={(e) => setEmail(e.target.value)}/>
+          <textarea placeholder='Description' rows="15" cols={50} name="description" onChange={(e) => setMsg(e.target.value)}></textarea>
+          <motion.button
+           whileHover={{ scale: 1.1 }}
+           whileTap={{ scale: 0.9 }}
+           type='submit'>Submit</motion.button>
+        </form>
+        {loader && (
+          <img src={gif} alt='loading...'></img>
+        )}
+        {success && (
+          <span className='successMsg'>Your Form was send , i'll reply as soon as possible, Thanks !</span>
+        )}
+      </div>
+      <div className="right">
+        <div className="imgContainer">
+          <img src={Marseille} alt="" />
         </div>
-        <div className="right"></div>
+      </div>
     </div>
   )
 }

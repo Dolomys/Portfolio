@@ -4,100 +4,135 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    // overflow-x: visible !important;
+    position: relative;
+ 
 
     h1 {
-        margin: 3em 0em 1em;
-        color: $mainColor;
-        font-size: 48px;
+        font-size: 50px;
     }
 
-    .carousel {
-        width: 90%;
+    ul {
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    .container {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    
+
+    .modal {
+        background-color: #3f3e3e60;
+        position: absolute;
+        width: 100%;
         height: 100%;
+        // top: 20%;
+        // left: 40%;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        cursor: grab;
-        overflow: hidden;
 
-        .innerCarousel{
+        .innerModal {
             display: flex;
-            
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 10px;
+            width: 60vmin;
+            height: 70vmin;
 
-            .projectCard {
-                min-height: 30rem;
-                min-width: 20rem;
-                padding: 40px;
+            .top {
+                display: flex;
                 position: relative;
-                
-                img {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding-top: 10px;
+
+                .closeModal{
                     position: absolute;
-                    width: 80%;
-                    height: 100%;
+                    right: 3%;
+                    top: 3%;
+                    padding: inherit;
+                    font-weight: 900;
+                    cursor: pointer;
+                }
+
+            }
+
+            img {
+                width: 98%;
+                height: 60%;
+                border-radius: 10px;
+         
+            }
+
+            ul {
+                margin: 10px;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+
+                .singleTech {
+                    font-size: 1.5vmin;
+                    margin: 1vmin 2vmin;
+                    color: white;
+                    background-color: $mainColor;
+                    padding: 10px;
                     border-radius: 10px;
-                    pointer-events: none;
-                    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;                
-                }
-
-                .cardTitle {
-                    position: absolute;
-                    top: 10%;
-                    font-size: 36px;
-                    color: white;
-                    left: 40%;
-                    z-index: 5;
-                }
-
-                .cardTech {
-                    width: 80%;
-                    position: absolute;
-                    top: 70%;
-                    z-index: 5;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    color: white;
-
-                    .singleTech {
-                        background-color: teal;
-                        border-radius: 10px;
-                        padding: 10px;
-                    }
-                }
-                .cardDesc {
-                    position: absolute;
-                    bottom: 15%;
-                    z-index: 5;
-                    color: white;
-                }
-
-                .cardLinks {
-                    width: 80%;
-                    position: absolute;
-                    bottom: 0;
-                    z-index: 5;
-                    display: flex;
-                    justify-content: space-around;
-                    
-
-                    .link {
-                        text-decoration: none;
-                        color: white;
-                        background-color: coral;
-                        border-radius: 10px;
-                        padding: 10px
-                    }
                 }
             }
-        }
 
-        .big {
-            background-color: aquamarine;
-            width: 100vh;
+            .linkBtn {
+                margin: 1em 0 1em; 
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+               .gitBtn {
+                flex: 1;
+                margin-left: 1em;
+                text-align: center;
+                border: 1px solid white;
+                padding: 10px 30px;
+                border-radius: 10px;
+                background-color: teal;
+                color: white;
+                text-decoration: none;
+
+               }
+               .liveBtn {
+                flex: 2;
+                margin: 0 1em;
+                text-align: center;
+                border: 1px solid white;
+                padding: 10px 70px;
+                border-radius: 10px;
+                background-color: coral;
+                color: white;
+                text-decoration: none;
+                
+               }
+            }
+
+            
+        }
         }
 
        
-    }
-    
+
 }
