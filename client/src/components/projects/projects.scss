@@ -6,11 +6,7 @@
     align-items: center;
     position: relative;
     justify-content: center;
- 
 
-        @include mobile {
-            height: 300vh !important;
-        }
 
     h1 {
         font-size: $h1-font-size;
@@ -28,6 +24,10 @@
         // align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+
+        @include mobile {
+            width: 80%;
+        }
         
     }
     

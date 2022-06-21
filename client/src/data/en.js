@@ -14,12 +14,12 @@ export const en = {
         scroll: "Scroll down"
     },
     about: {
-        title: "About me",
-        about1: "Hello, i'm Alexandre FLORENT" ,
-        about2: 'Full stack web developper',
-        about3: 'Self taught for six month followed by one year internship !',
-        about4: 'Located in Marseille',
-        about5: 'I also love to climb, hike, surf, highline and always trying new outdoor sport',
+        title: 'About me',
+        about1: "Hi, I'm Alexandre FLORENT ",
+        about2: "Full Stack Web Developper located in Marseille",
+        about3: "I was self-taught for 6 months before entering a year of work-study training",
+        about4: "I'm trying to deepen my knowledge as much as i can, right now I'm learning TDD and React Native ",
+        about5: "In my spare time, I do a lot of climbing, hiking, kayaking and mountain trekking.",
     },
     skills : "Skills",
     projects: {

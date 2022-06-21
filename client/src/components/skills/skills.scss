@@ -8,7 +8,7 @@
     justify-content: center;
 
     @include mobile {
-        height: 120vh !important;
+        height: auto !important
     }
 
     .skillWrapper {
@@ -22,6 +22,7 @@
         @include mobile {
             flex-direction: column;
             align-items: center;
+            width: 90%;
         }
 
 

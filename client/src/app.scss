@@ -8,6 +8,7 @@
     
     @include mobile {
         overflow-x: hidden;
+        height: auto;
 
     }
    
@@ -23,6 +24,11 @@
             > *{
                 height: 100vh;
                 scroll-snap-align: start;
+
+                @include mobile {
+                    height: auto;
+            
+                }
             }
         }
     

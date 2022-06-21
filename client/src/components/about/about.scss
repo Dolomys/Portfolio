@@ -33,11 +33,17 @@
                 
                 @include mobile {
                     margin: 1em;
+                    width: 80%;
+                    text-align: center;
                 }
             }
 
             .cv {
                 margin-top: 3rem;
+
+                @include mobile {
+                    text-align: center;
+                }
 
                 .downloadCv {
                     padding: 1rem;
