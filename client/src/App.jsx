@@ -6,23 +6,44 @@ import { About } from "./components/about/About";
 import { Contact } from "./components/contact/Contact";
 
 import './app.scss'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu } from "./components/menu/Menu";
+import { Skills } from "./components/skills/Skills";
+import {fr} from './data/fr.js'
+import {en} from './data/en.js'
+
 
 function App() {
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dark, setDark] = useState(false)
+  const [english, setEnglish] = useState(false)
+  const [language, setLanguage] = useState("")
+
+  useEffect(()=> {
+
+    const isEnglish = () => {
+      if(english) {
+        setLanguage(fr)
+      }
+      else {
+        setLanguage(en)
+      }
+    }
+
+    isEnglish()
+    
+  },[english])
 
   return (
-    <div className={dark ? "app dark" : "app"}>
-      <TopBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} dark={dark} setDark={setDark} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}  dark={dark} />
+    <div className={"app"}>
+      <TopBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} english={english} setEnglish={setEnglish} />
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} language={language} />
       <div className="sections">
-        <Intro dark={dark} />
-        <About />
-        <Projects dark={dark} />
-        <Contact dark={dark} />
+        <Intro  language={language} />
+        <About language={language} />
+        <Skills language={language} />
+        <Projects  language={language} english={english}/>
+        <Contact language={language} />
       </div>
     </div>
   );

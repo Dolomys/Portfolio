@@ -1,62 +1,72 @@
+import mdm from '../img/mdm.png'
+import krypters from'../img/krypters.png'
+import maisonEloe from'../img/maisoneloe.png'
+import blog from'../img/blog.png'
+import store from'../img/store.png'
+import next from'../img/next.png'
+
 export const projects = [
     {
         id:1,
-        name:"test1",
-        picture:"https://picsum.photos/id/870/200/300?grayscale&blur=2",
-        tech:["Javascript", "React", "NodeJs", "MongoDb"],
-        desc:"Short desc about this project, blablabla....",
-        code:"www.alexandre-florent.com",
-        github:"www.github.com",
-        cat: ["Featured", "Web App", "Mobile App"]
+        name:"Mern Blog",
+        picture:blog,
+        tech:["React", "NodeJs", "MongoDb"],
+        desc:"Interactive blog with user handling , blog posts, comments and some other features, etc...",
+        descFR:"Blog Interactif avec gestion des utilisateurs, commentaires, etc...",
+        live:"https://locawaveblog.netlify.app/",
+        code:"https://github.com/Dolomys/FirstBlog",
+        cat: ["All", "Personal"]
     },
     {
         id:2,
-        name:"test2",
-        picture:"https://picsum.photos/200/300/?blur",
-        tech:["Javascript", "React", "NodeJs", "MongoDb"],
-        desc:"Short desc about this project, blablabla....",
-        code:"www.alexandre-florent.com",
-        github:"www.github.com",
-        cat: ["Featured", "Mobile App"]
+        name:"Ecommerce UI - responsive // WORK IN PROGRESS",
+        picture:store,
+        tech:["React"],
+        desc:"Ecommerce UI - fake store api // In Progress - add stripe, redux and back soon",
+        descFR:"UI site Ecommerce - fake store api // en Cours - ajout de stripe , redux et du back bientot",
+        live:"https://lwstore.netlify.app/",
+        code:"https://github.com/Dolomys/LW-Store",
+        cat: ["All", "Personal"]
+    },
+    {
+        id:2,
+        name:"NextJs + Sanity",
+        picture:next,
+        tech:["NextJs", "Sanity"],
+        desc:"Website using NextJs and Sanity so the images and text can be easely access by non-dev",
+        descFR:"Site fait avec NextJs et Sanity pour avoir un BO user accessible pour des non-dev",
+        // live:"www.barbara-schluderbacher.com",
+        cat: ["All", "Freelance"],
+        inProgress: "true"
     },
     {
         id:3,
-        name:"test3",
-        picture:"https://picsum.photos/seed/picsum/200/300",
-        tech:["Javascript", "React", "NodeJs", "MongoDb"],
-        desc:"Short desc about this project, blablabla....",
-        code:"www.alexandre-florent.com",
-        github:"www.github.com",
-        cat: [ "Web App", "Mobile App"]
+        name:"Krypters",
+        picture:krypters,
+        tech:["PHP", "Javascript", "JQuery", "Wordpress"],
+        desc:"Back office User, panier, checkout and plugin crypto",
+        descFR:"Back office Utilisateur, panier, checkout et plugin crypto",
+        live:"https://krypters.pro/fr/accueil-2/",
+        cat: [ "All", "Company"]
     },
     {
-        id:4,
-        name:"test4",
-        picture:"https://picsum.photos/id/237/200/300",
-        tech:["Javascript", "React", "NodeJs", "MongoDb"],
-        desc:"Short desc about this project, blablabla....",
-        code:"www.alexandre-florent.com",
-        github:"www.github.com",
-        cat: ["Featured", "Web App"]
+        id:3,
+        name:"Maison Eloe",
+        picture:maisonEloe,
+        tech:["PHP", "Javascript", "JQuery", "Wordpress"],
+        desc:"Back Office user",
+        descFR:"Back Office utilisateur",
+        live:"https://maisoneloe.com/",
+        cat: [ "All", "Company"]
     },
     {
-        id:5,
-        name:"test5",
-        picture:"https://picsum.photos/200",
-        tech:["Javascript", "React", "NodeJs", "MongoDb"],
-        desc:"Short desc about this project, blablabla....",
-        code:"www.alexandre-florent.com",
-        github:"www.github.com",
-        cat: ["Featured", "Mobile App"]
-    },
-    {
-        id:6,
-        name:"test6",
-        picture:"https://picsum.photos/id/870/200/300?grayscale&blur=2",
-        tech:["Javascript", "React", "NodeJs", "MongoDb"],
-        desc:"Short desc about this project, blablabla....",
-        code:"www.alexandre-florent.com",
-        github:"www.github.com",
-        cat: ["Featured", "Web App"]
+        id:3,
+        name:"Maison du Menuisier",
+        picture:mdm,
+        tech:["PHP", "Javascript", "JQuery", "Wordpress"],
+        desc:"Back Office user",
+        descFR:"Back Office utilisateur",
+        live:"https://maisoneloe.com/",
+        cat: [ "All", "Company"]
     },
 ]

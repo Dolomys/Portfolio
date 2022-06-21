@@ -5,7 +5,7 @@ import gif from "../../img/loader.gif"
 import { motion } from "framer-motion"
 import axios from 'axios'
 
-export const Contact = () => {
+export const Contact = ({language}) => {
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -42,21 +42,21 @@ export const Contact = () => {
   return (
     <div className="contact" id="contact">
       <div className="left">
-        <h1>Contact Me</h1>
+        <h1>{language && language.contact.title}</h1>
         <form  method='POST' onSubmit={handleSubmit} >
-          <input type="text" placeholder='Name' name="name" onChange={(e) => setName(e.target.value)}/>
+          <input type="text" placeholder={language && language.contact.name} name="name" onChange={(e) => setName(e.target.value)}/>
           <input type="text" placeholder='Email' name="email" onChange={(e) => setEmail(e.target.value)}/>
           <textarea placeholder='Description' rows="15" cols={50} name="description" onChange={(e) => setMsg(e.target.value)}></textarea>
           <motion.button
            whileHover={{ scale: 1.1 }}
            whileTap={{ scale: 0.9 }}
-           type='submit'>Submit</motion.button>
+           type='submit'>{language && language.contact.submit}</motion.button>
         </form>
         {loader && (
           <img src={gif} alt='loading...'></img>
         )}
         {success && (
-          <span className='successMsg'>Your Form was send , i'll reply as soon as possible, Thanks !</span>
+          <span className='successMsg'>{language && language.contact.success}</span>
         )}
       </div>
       <div className="right">

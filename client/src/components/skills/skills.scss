@@ -1,0 +1,60 @@
+@import '../../global.scss';
+
+.skills {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+        height: 120vh !important;
+    }
+
+    .skillWrapper {
+
+        margin-top: $mb-1-5;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        > * {
+            width: 30%;
+            padding: $mb-1-5;
+           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+           background-color: $container-color;
+
+           
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2em;
+            width: 80%;
+        }
+
+           h2 {
+            margin-bottom: $mb-1;
+
+           }
+
+           li {
+            margin-bottom: $mb-0-5;
+            display: flex;
+            align-items: center;
+
+            > * {
+                margin-right: $mb-1;
+            }
+           
+           }
+        }
+    }
+}

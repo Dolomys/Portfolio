@@ -3,24 +3,36 @@
 .intro {
     display: flex;
     position: relative;
+    justify-content: space-around;
+
+    @include mobile {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
 
     .left {
-        flex: 2;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 3rem;
        
         .wrapper {
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding-left: 5em;
            
 
             .textWrapper {
               
-                font-size: 8vmin;
-                
+                .title {
+                    font-size: $big-font-size;
+                    font-weight: $font-semi-bold;
+                }
+
+                .profession {
+                    color: $text-color-light;
+                }
             }
 
           
@@ -33,7 +45,7 @@
                     text-decoration: none;
                     font-size: 24px;
                      cursor: pointer;
-                     background-color: #303437;
+                     background-color: $first-color;
 
                      &.dark {
                         color: #303437;
@@ -44,33 +56,45 @@
 
             
         }
+
+        .more {
+            position: absolute;
+            bottom: 10%;
+            margin-top: 1em;
+            color: $text-color;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+
+            @include mobile {
+                bottom: 5%;
+            }
+            
+            .Mouse {
+                color: $first-color;
+            }
+
+            .arrow {
+                font-size: 1rem;
+            }
+            
+        }
     }
 
     .right {
-        flex:1;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
        
-        .meImg{
-            width: 50%;
-            border-radius: 10px;
+       .blob {
+        width: 300px;
+        fill: $first-color;
+
+
+        .blobImg {
+            width: 170px;
         }
+       }
     }
 
-    .more {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        
-        .arrow {
-            animation: arrowBlink 2s infinite;
-            font-size: 48px;
-            color: $mainColor;
-        }
-
-        @keyframes arrowBlink {
-            100%{
-                opacity: 0;
-            }
-        }
-        
-    }
 }

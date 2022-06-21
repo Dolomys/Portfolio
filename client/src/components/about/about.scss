@@ -1,41 +1,62 @@
 @import "../../global.scss";
 
 .about {
-    padding: 10px 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow-y: hidden;
 
     h1 {
-        font-size: 7vmin;
-        overflow: hidden;
-        margin-bottom: 10px;
-        height: 3rem;
+        font-size: $h1-font-size;
+        text-align: center;
     }
 
     .aboutMe {
+        margin-top: 2rem;
         display: flex;
-        overflow-y: hidden;
-        
+        flex-direction: row-reverse;
 
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    
         .left{
             flex: 1;
             padding: 1em;
             width: 100%;
             height: 100%;
+
+            .aboutText {
+                font-size: $normal-font-size;
+                
+                @include mobile {
+                    margin: 1em;
+                }
+            }
+
+            .cv {
+                margin-top: 3rem;
+
+                .downloadCv {
+                    padding: 1rem;
+                    border-radius: 5px;
+                    background-color: $first-color;
+                    color: white;
+                }
+            }
         }
         .right{
             flex: 1;
 
             .imgContainer {
-           
-                
-                img {
-                    width: 30%;
-                    margin-left: 15em;
-                    border-radius: 5px;
-                }
+            height: 320px;
 
+            img {
+                height: 100%;
+                border-radius: 5px;
+            }
             }
 
         

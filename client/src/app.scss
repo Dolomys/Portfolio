@@ -1,24 +1,27 @@
+@import './global.scss';
+
 .app{
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+    
+    @include mobile {
+        overflow-x: hidden;
 
+    }
    
         .sections{
-            width: 100%;
-            height: calc(100vh - 70px);
-            background-color: white;
-            color: #303437;
             position: relative;
             top: 70px;
-            scroll-behavior: smooth;
-            scroll-snap-type: y mandatory;
-            scrollbar-width: none; //for firefox
-            &::-webkit-scrollbar{
-                display: none;
-            }
-    
+            max-width: 150vmin;
+            margin-left: $mb-1-5;
+            margin-right: $mb-1-5;
+            
+        
+
             > *{
-                width: 100vw;
-                height: calc(100vh - 70px);
+                height: 100vh;
                 scroll-snap-align: start;
             }
         }
@@ -40,7 +43,6 @@
             }
     
             > *{
-                width: 100vw;
                 height: calc(100vh - 70px);
                 scroll-snap-align: start;
             }

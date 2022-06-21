@@ -6,80 +6,67 @@ import { useEffect, useRef, useState } from "react";
 import { PortfolioList } from "../portfolioList/PortfolioList";
 import { SingleProject } from "../singleProject/SingleProject";
 
-export const Projects = ({dark}) => {
+export const Projects = ({language, english}) => {
 
-  const [selected, setSelected] = useState("Featured")
-  const [clicked, setClicked] = useState("")
-  const [showModal, setShowModal] = useState(false)
+  const dark = false
+
+  const [selected, setSelected] = useState("All")
 
   const list = [
     {
-      id: "Featured",
-      title: "Featured"
+      id: "All",
+      titleEN: "All",
+      titleFR: "Tout",
     },
     {
-      id: "Web App",
-      title: "Web App"
+      id: "Personal",
+      titleEN: "Personal",
+      titleFR: "Personnels",
     },
     {
-      id: "Mobile App",
-      title: "Mobile App"
+      id: "Company",
+      titleEN: "Company",
+      titleFR: "Entreprise",
     },
     {
-      id: "PWA",
-      title: "PWA"
+      id: "Freelance",
+      titleEN: "Freelance",
+      titleFR: "Freelance",
     },
-    {
-      id: "Design",
-      title: "Design"
-    }
   ]
 
   return (
     <div className="projects" id="projects"> 
-    <h1>Projects</h1>
+    <h1>{language && language.projects.title}</h1>
     <ul>
       {list.map((e) => (
         <PortfolioList 
-        title={e.title}
+        title={!english ? e.titleEN : e.titleFR}
         active={selected === e.id}
         setSelected={setSelected}
         dark={dark}
+        id={e.id}
+        language={language}
         />
       ))}
     </ul>
     <div className="container">
       {projects && projects.filter(project => project.cat.includes(selected)).map(project => (
         <SingleProject
+          english={english}
           title={project.name}
           image={project.picture}
-          clicked={clicked}
-          setClicked={setClicked}
+          desc={project.desc}
+          descFR={project.descFR}
+          code={project.code}
+          live={project.live}
+          tech={project.tech}
+          inProgress={project.inProgress}
+          language={language}
           dark={dark}
         />
       ))}
     </div>
-    {clicked && projects.filter(project => clicked === project.name).map(e => (
-        <div className="modal" onClick={() => setClicked("")}>
-          <div className="innerModal" onClick={e => e.stopPropagation()}>
-            <div className="top">
-            <h2 className="modalTitle">{e.name}</h2>
-            <span className="closeModal" onClick={()=> setClicked("")}>X</span>
-            </div>
-            <img src={e.picture} alt="" className="modalImg"/>
-            <ul>
-              {e.tech.map(tech => (
-                <li className="singleTech">{tech}</li>
-              ))}
-            </ul>
-            <p className="modalDesc">{e.desc}</p>
-            <div className="linkBtn">
-              <a href={e.github} className="gitBtn">Github</a>
-              <a href={e.code} className="liveBtn">Live View</a>
-            </div>
-          </div>
-        </div>
-      ))}
     </div>
   )
 }
