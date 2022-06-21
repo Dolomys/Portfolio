@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fbbfa22a.css",
+    "main.js": "/static/js/main.b321d9fb.js",
+    "static/media/meMountain.jpg": "/static/media/meMountain.77f5067ae9d85c9a2849.jpg",
+    "static/media/Marseille.png": "/static/media/Marseille.849145332b1d78754a7a.png",
+    "static/media/krypters.png": "/static/media/krypters.e4251f9d4fed5c397017.png",
+    "static/media/maisoneloe.png": "/static/media/maisoneloe.f938b2aad9025e34438a.png",
+    "static/media/store.png": "/static/media/store.4bad72a4ab51098fdb9f.png",
+    "static/media/blog.png": "/static/media/blog.0931e09d866503a0607d.png",
+    "static/media/cloud4.png": "/static/media/cloud4.d6d2482cad00d1249394.png",
+    "static/media/cloud5.png": "/static/media/cloud5.2b00aa33f09440ccb96b.png",
+    "static/media/cloud3.png": "/static/media/cloud3.9328a85b3cf03bf84ee6.png",
+    "static/media/cloud2.png": "/static/media/cloud2.d30b116bea0977a389cb.png",
+    "static/media/cloud1.png": "/static/media/cloud1.deebc7b5ced3c8ad3222.png",
+    "static/media/me.png": "/static/media/me.a24f41f2b76e8b414a0e.png",
+    "static/media/cv.pdf": "/static/media/cv.58397a2f038672af2f64.pdf",
+    "static/media/mdm.png": "/static/media/mdm.e9aa5eb4dc937f32c589.png",
+    "static/media/next.png": "/static/media/next.c0e8fef952e844e6cc07.png",
+    "static/media/loader.gif": "/static/media/loader.e73a5741c25f38bb057d.gif",
+    "index.html": "/index.html",
+    "main.fbbfa22a.css.map": "/static/css/main.fbbfa22a.css.map",
+    "main.b321d9fb.js.map": "/static/js/main.b321d9fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbbfa22a.css",
+    "static/js/main.b321d9fb.js"
+  ]
+}
