@@ -3,7 +3,7 @@ import krypters from'../img/krypters.png'
 import maisonEloe from'../img/maisoneloe.png'
 import blog from'../img/blog.png'
 import store from'../img/store.png'
-import next from'../img/next.png'
+import portfolio from'../img/portfolio.png'
 
 export const projects = [
     {
@@ -26,6 +26,17 @@ export const projects = [
         descFR:"Site Ecommerce",
         live:"https://lwstore.netlify.app/",
         code:"https://github.com/Dolomys/LW-Store",
+        cat: ["All", "Personal"]
+    },
+    {
+        id:2,
+        name:"Portfolio",
+        picture:portfolio,
+        tech:["React"],
+        desc:"This Website",
+        descFR:"Site Ecommerce",
+        live:"https://alexandre-florent.com/",
+        code:"https://github.com/Dolomys/Portfolio",
         cat: ["All", "Personal"]
     },
     // {

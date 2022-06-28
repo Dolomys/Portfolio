@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bd53a303.css",
-    "main.js": "/static/js/main.1202048f.js",
+    "main.js": "/static/js/main.f013a46f.js",
     "static/media/meMountain.jpg": "/static/media/meMountain.77f5067ae9d85c9a2849.jpg",
     "static/media/Marseille.png": "/static/media/Marseille.849145332b1d78754a7a.png",
     "static/media/krypters.png": "/static/media/krypters.e4251f9d4fed5c397017.png",
@@ -16,14 +16,14 @@
     "static/media/me.png": "/static/media/me.a24f41f2b76e8b414a0e.png",
     "static/media/cv.pdf": "/static/media/cv.e31bf0a5e39c95caf25d.pdf",
     "static/media/mdm.png": "/static/media/mdm.e9aa5eb4dc937f32c589.png",
-    "static/media/next.png": "/static/media/next.c0e8fef952e844e6cc07.png",
+    "static/media/portfolio.png": "/static/media/portfolio.ecc8e152ba732b8dc24c.png",
     "static/media/loader.gif": "/static/media/loader.e73a5741c25f38bb057d.gif",
     "index.html": "/index.html",
     "main.bd53a303.css.map": "/static/css/main.bd53a303.css.map",
-    "main.1202048f.js.map": "/static/js/main.1202048f.js.map"
+    "main.f013a46f.js.map": "/static/js/main.f013a46f.js.map"
   },
   "entrypoints": [
     "static/css/main.bd53a303.css",
-    "static/js/main.1202048f.js"
+    "static/js/main.f013a46f.js"
   ]
 }
