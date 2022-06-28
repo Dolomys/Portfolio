@@ -28,11 +28,11 @@ export const Projects = ({language, english}) => {
       titleEN: "Company",
       titleFR: "Entreprise",
     },
-    {
-      id: "Freelance",
-      titleEN: "Freelance",
-      titleFR: "Freelance",
-    },
+    // {
+    //   id: "Freelance",
+    //   titleEN: "Freelance",
+    //   titleFR: "Freelance",
+    // },
   ]
 
   return (

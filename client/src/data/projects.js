@@ -19,26 +19,26 @@ export const projects = [
     },
     {
         id:2,
-        name:"Ecommerce UI - responsive // WORK IN PROGRESS",
+        name:"Ecommerce Front- responsive",
         picture:store,
         tech:["React"],
-        desc:"Ecommerce UI - fake store api // In Progress - add stripe, redux and back soon",
-        descFR:"UI site Ecommerce - fake store api // en Cours - ajout de stripe , redux et du back bientot",
+        desc:"Ecommerce WebSite",
+        descFR:"Site Ecommerce",
         live:"https://lwstore.netlify.app/",
         code:"https://github.com/Dolomys/LW-Store",
         cat: ["All", "Personal"]
     },
-    {
-        id:2,
-        name:"NextJs + Sanity",
-        picture:next,
-        tech:["NextJs", "Sanity"],
-        desc:"Website using NextJs and Sanity so the images and text can be easely access by non-dev",
-        descFR:"Site fait avec NextJs et Sanity pour avoir un BO user accessible pour des non-dev",
-        // live:"www.barbara-schluderbacher.com",
-        cat: ["All", "Freelance"],
-        inProgress: "true"
-    },
+    // {
+    //     id:2,
+    //     name:"NextJs + Sanity",
+    //     picture:next,
+    //     tech:["NextJs", "Sanity"],
+    //     desc:"Website using NextJs and Sanity so the images and text can be easely access by non-dev",
+    //     descFR:"Site fait avec NextJs et Sanity pour avoir un BO user accessible pour des non-dev",
+    //     // live:"www.barbara-schluderbacher.com",
+    //     cat: ["All", "Freelance"],
+    //     inProgress: "true"
+    // },
     {
         id:3,
         name:"Krypters",

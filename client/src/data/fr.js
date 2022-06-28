@@ -16,10 +16,10 @@ export const fr = {
     about: {
         title: 'A Propos',
         about1: "Salut, Je suis Alexandre FLORENT, ",
-        about2: "Développeur Web Full Stack situé sur Marseille",
-        about3: "J'ai été autodidacte pendant 6 mois avant d'intégré une année de formation en alternance",
-        about4: "J'essaye d'appronfondir mes connaissances dès que possible, en ce moment j'apprend le TDD et React Native ",
-        about5: "Sur mon temps libre, je fait beaucoup d'escalade, de la randonnée , du kayak et de trek en montagne",
+        about2: "Développeur Web Full Stack situé sur Marseille.",
+        about3: "J'ai été autodidacte pendant 6 mois avant d'intégré une année de formation en alternance.",
+        about4: "J'appronfondie mes connaissances dès que possible, en ce moment je me forme au TDD et à React Native.",
+        about5: "Sur mon temps libre, je fais beaucoup d'escalade, de la randonnée , du kayak et des treks en montagne.",
     },
     skills : "Compétences",
     projects: {
