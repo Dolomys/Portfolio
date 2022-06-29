@@ -24,8 +24,8 @@ export const Projects = ({language, english}) => {
       titleFR: "Personnels",
     },
     {
-      id: "Company",
-      titleEN: "Company",
+      id: "Professional",
+      titleEN: "Professional",
       titleFR: "Entreprise",
     },
     // {

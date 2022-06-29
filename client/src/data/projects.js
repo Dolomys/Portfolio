@@ -58,7 +58,7 @@ export const projects = [
         desc:"Back office User, panier, checkout and plugin crypto",
         descFR:"Back office Utilisateur, panier, checkout et plugin crypto",
         live:"https://krypters.pro/fr/accueil-2/",
-        cat: [ "All", "Company"]
+        cat: [ "All", "Professional"]
     },
     {
         id:3,
@@ -68,7 +68,7 @@ export const projects = [
         desc:"Back Office user",
         descFR:"Back Office utilisateur",
         live:"https://maisoneloe.com/",
-        cat: [ "All", "Company"]
+        cat: [ "All", "Professional"]
     },
     {
         id:3,
@@ -78,6 +78,6 @@ export const projects = [
         desc:"Back Office user",
         descFR:"Back Office utilisateur",
         live:"https://maisoneloe.com/",
-        cat: [ "All", "Company"]
+        cat: [ "All", "Professional"]
     },
 ]
