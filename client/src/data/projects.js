@@ -4,6 +4,7 @@ import maisonEloe from'../img/maisoneloe.png'
 import blog from'../img/blog.png'
 import store from'../img/store.png'
 import portfolio from'../img/portfolio.png'
+import travel from'../img/travel.png'
 
 export const projects = [
     {
@@ -29,7 +30,7 @@ export const projects = [
         cat: ["All", "Personal"]
     },
     {
-        id:2,
+        id:3,
         name:"Portfolio",
         picture:portfolio,
         tech:["React"],
@@ -39,19 +40,19 @@ export const projects = [
         code:"https://github.com/Dolomys/Portfolio",
         cat: ["All", "Personal"]
     },
-    // {
-    //     id:2,
-    //     name:"NextJs + Sanity",
-    //     picture:next,
-    //     tech:["NextJs", "Sanity"],
-    //     desc:"Website using NextJs and Sanity so the images and text can be easely access by non-dev",
-    //     descFR:"Site fait avec NextJs et Sanity pour avoir un BO user accessible pour des non-dev",
-    //     // live:"www.barbara-schluderbacher.com",
-    //     cat: ["All", "Freelance"],
-    //     inProgress: "true"
-    // },
     {
-        id:3,
+        id:4,
+        name:"Travel App",
+        picture:travel,
+        tech:["ReactJs", "MongoDB", "Firebase", 'NodeJs', 'Sass'],
+        desc:"Travel App, you can see and add your spots to the map and interact with them",
+        descFR:"SApplication de voyage, vous pouvez ajouter vos spots à la carte et intéragir avec",
+        live:"https://locawwave.netlify.app",
+        code:"https://github.com/Dolomys/LocaWave",
+        cat: ["All", "Personal"],
+    },
+    {
+        id:5,
         name:"Krypters",
         picture:krypters,
         tech:["PHP", "Javascript", "JQuery", "Wordpress"],
@@ -61,7 +62,7 @@ export const projects = [
         cat: [ "All", "Professional"]
     },
     {
-        id:3,
+        id:6,
         name:"Maison Eloe",
         picture:maisonEloe,
         tech:["PHP", "Javascript", "JQuery", "Wordpress"],
@@ -71,7 +72,7 @@ export const projects = [
         cat: [ "All", "Professional"]
     },
     {
-        id:3,
+        id:7,
         name:"Maison du Menuisier",
         picture:mdm,
         tech:["PHP", "Javascript", "JQuery", "Wordpress"],

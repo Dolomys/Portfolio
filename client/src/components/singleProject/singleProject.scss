@@ -63,6 +63,9 @@
             justify-content: space-around;
             font-size: $small-font-size;
            
+            @include mobile {
+                width: 100%;
+            }
 
             .code {
                 display: flex;
